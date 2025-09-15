@@ -17,11 +17,11 @@ int у=123/10; // у будет иметь значение 12
 x=4568
 результат: 14
      */
-    public static int sumLastNums(int x) {
+    public int sumLastNums(int x) {
         return (x % 10) + ((x / 10) % 10);
     }
 
-    public static void sumLastNums2() {
+    public void sumLastNums2() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите целое число (не менее 2 цифр): ");
         while (!scanner.hasNextInt()) {
@@ -52,11 +52,11 @@ x=3
 x=-5
 результат: false
      */
-    public static boolean isPositive(int x) {
+    public boolean isPositive(int x) {
         return x > 0;
     }
 
-    public static void isPositive2() {
+    public void isPositive2() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите число: ");
         while (!scanner.hasNextInt()) {
@@ -75,22 +75,22 @@ x=-5
 Большая буква.
 Дана сигнатура метода: public bool isUpperCase (char x);
 Необходимо реализовать метод таким образом, чтобы он принимал символ x и
-возвращал true, если это большая буква в диапазоне от ‘A’ до ‘Z’
+возвращал true, если это большая буква в диапазоне от 'A' до 'Z'
 .
 Пример 1:
 x=
-’D’
+'D'
 результат: true
 Пример 2:
 x=
-’q’
+'q'
 результат: false
      */
-    public static boolean isUpperCase(char x) {
+    public boolean isUpperCase(char x) {
         return Character.isUpperCase(x);
     }
 
-    public static void isUpperCase2() {
+    public void isUpperCase2() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите букву: ");
         char bykva = scanner.next().charAt(0);
@@ -100,7 +100,7 @@ x=
         scanner.close();
     }
 
-     /* Задание 8
+    /* Задание 8
 Делитель.
 Дана сигнатура метода: public bool isDivisor (int a, int b);
 Необходимо реализовать метод таким образом, чтобы он возвращал true, если
@@ -111,12 +111,12 @@ a=3 b=6
 Пример 2:
 a=2 b=15
 результат: false
-      */
-    public static boolean isDivisor(int a, int b) {
+     */
+    public boolean isDivisor(int a, int b) {
         return a % b == 0 || b % a == 0;
     }
 
-    public static void isDivisor2() {
+    public void isDivisor2() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите число a: ");
         while (!scanner.hasNextInt()) {
@@ -138,7 +138,7 @@ a=2 b=15
         scanner.close();
     }
 
-     /* Задание 10
+    /* Задание 10
 Дана сигнатура метода: public int lastNumSum(int a, int b)
 Необходимо реализовать метод таким образом, чтобы он считал сумму цифр
 двух чисел из разряда единиц. Выполните с его помощью последовательное
@@ -151,12 +151,12 @@ a=2 b=15
 9+14 это 13
 13+1 это 4
 Итого 4
-      */
-    public static int lastNumSum(int a, int b) {
+     */
+    public int lastNumSum(int a, int b) {
         return (a % 10) + (b % 10);
     }
 
-    public static void lastNumSum2() {
+    public void lastNumSum2() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите число a: ");
         while (!scanner.hasNextInt()) {
@@ -177,7 +177,8 @@ a=2 b=15
         System.out.println("Сумма последних цифр: " + result);
         scanner.close();
     }
-//Задание 2. Условия
+
+    //Задание 2. Условия
      /* Задание 2
 Безопасное деление.
 Дана сигнатура метода: public double safeDiv (int x, int y);
@@ -192,14 +193,14 @@ x=5 y=0
 x=8 y=2
 результат: 4
       */
-    public static double safeDiv(int x, int y) {
+    public double safeDiv(int x, int y) {
         if (y == 0) {
             return 0;
         }
         return (double) x / y;
     }
 
-    public static void safeDiv2() {
+    public void safeDiv2() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите число x: ");
         while (!scanner.hasNextInt()) {
@@ -221,7 +222,7 @@ x=8 y=2
         scanner.close();
     }
 
-     /* Задание 4
+    /* Задание 4
 Строка сравнения.
 Дана сигнатура метода: public String makeDecision (int x, int y);
 Необходимо реализовать метод таким образом, чтобы он возвращал строку,
@@ -229,15 +230,15 @@ x=8 y=2
 знак операции сравнения (больше, меньше, или равно).
 Пример 1:
 x=5 y=7
-результат: “5< 7”
+результат: "5< 7"
 Пример 2:
 x=8 y=-1
-результат: “8 >-1”
+результат: "8 >-1"
 Пример 3:
 x=4 y=4
-результат: “4==4”
-      */
-    public static String makeDecision(int x, int y) {
+результат: "4==4"
+     */
+    public String makeDecision(int x, int y) {
         if (x > y) {
             return x + " > " + y;
         } else if (x < y) {
@@ -247,7 +248,7 @@ x=4 y=4
         }
     }
 
-    public static void makeDecision2() {
+    public void makeDecision2() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите число x: ");
         while (!scanner.hasNextInt()) {
@@ -269,7 +270,7 @@ x=4 y=4
         scanner.close();
     }
 
-     /* Задание 6
+    /* Задание 6
 Тройная сумма.
 Дана сигнатура метода: public bool sum3 (int x, int y, int z);
 Необходимо реализовать метод таким образом, чтобы он возвращал true, если
@@ -281,17 +282,16 @@ x=5 y=7 z=2
 Пример 2:
 x=8 y=-1 z=4
 результат: false
-      */
-    public static boolean sum3(int x, int y, int z) {
+     */
+    public boolean sum3(int x, int y, int z) {
         if( x + y == z || x + z == y || y + z == x) {
             return true;
         }else{
             return false;
         }
-
     }
 
-    public static void sum32() {
+    public void sum32() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите число x: ");
         while (!scanner.hasNextInt()) {
@@ -328,22 +328,22 @@ x=8 y=-1 z=4
 год
 года
 лет
-Слово “год” добавляется, если число х заканчивается на 1, кроме числа 11.
-Слово “года” добавляется, если число х заканчивается на 2, 3 или 4, кроме чисел
+Слово "год" добавляется, если число х заканчивается на 1, кроме числа 11.
+Слово "года" добавляется, если число х заканчивается на 2, 3 или 4, кроме чисел
 12, 13, 14.
-Слово “лет”добавляется во всех остальных случаях.
+Слово "лет"добавляется во всех остальных случаях.
 Подсказка: оператор % позволяет получить остаток от деления.
 Пример 1:
 x=5
-результат: “5 лет”
+результат: "5 лет"
 Пример 2:
 x=31
-результат: “31 год”
+результат: "31 год"
 Пример 3:
 x=44
-результат: “44 года”
+результат: "44 года"
      */
-    public static String age(int x) {
+    public String age(int x) {
         if (x % 10 == 1) {
             return x + " год";
         } else if (x % 10 >= 2 && x % 10 <= 4 ) {
@@ -353,7 +353,7 @@ x=44
         }
     }
 
-    public static void age2() {
+    public void age2() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите возраст: ");
         while (!scanner.hasNextInt()) {
@@ -374,12 +374,12 @@ x=44
 В качестве параметра метод принимает строку, в которой записано название
 дня недели. Необходимо реализовать метод таким образом, чтобы он выводил
 на экран название переданного в него дня и всех последующих до конца недели
-дней. Если в качестве строки передан не день, то выводится текст “это не день
-недели”. Первый день понедельник, последний – воскресенье. Вместо if в данной
+дней. Если в качестве строки передан не день, то выводится текст "это не день
+недели". Первый день понедельник, последний – воскресенье. Вместо if в данной
 задаче используйте switch.
 Пример 1:
 x=
-”четверг”
+"четверг"
 результат:
 четверг
 пятница
@@ -387,11 +387,11 @@ x=
 воскресенье
 Пример 2:
 x=
-”чг”
+"чг"
 результат:
 это не день недели
      */
-    public static void printDays(String x) {
+    public void printDays(String x) {
         switch (x.toLowerCase()) {
             case "понедельник":
                 System.out.println("понедельник\nвторник\nсреда\nчетверг\nпятница\nсуббота\nвоскресенье");
@@ -419,7 +419,7 @@ x=
         }
     }
 
-    public static void printDays2() {
+    public void printDays2() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите день недели: ");
         String x = scanner.nextLine();
@@ -428,8 +428,7 @@ x=
         scanner.close();
     }
 
-
-//Задание 3. Циклы
+    //Задание 3. Циклы
     /* Задание 2
 Числа наоборот.
 Дана сигнатура метода: public String reverseListNums (int x);
@@ -437,9 +436,9 @@ x=
 которой будут записаны все числа от x до 0 (включительно).
 Пример:
 x=5
-результат: “5 4 3 2 1 0”
+результат: "5 4 3 2 1 0"
      */
-    public static String reverseListNums(int x) {
+    public String reverseListNums(int x) {
         StringBuilder result = new StringBuilder();
         for (int i = x; i >= 0; i--) {
             result.append(i).append(" ");
@@ -447,7 +446,7 @@ x=5
         return result.toString().trim();
     }
 
-    public static void reverseListNums2() {
+    public void reverseListNums2() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите число: ");
         while (!scanner.hasNextInt()) {
@@ -474,7 +473,7 @@ x=2
 y=5
 результат: 32
      */
-    public static int pow(int x, int y) {
+    public int pow(int x, int y) {
         int result = 1;
         for (int i = 0; i < y; i++) {
             result *= x;
@@ -482,7 +481,7 @@ y=5
         return result;
     }
 
-    public static void pow2() {
+    public void pow2() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите число: ");
         while (!scanner.hasNextInt()) {
@@ -519,7 +518,7 @@ x=1111
 x=1211
 результат: false
      */
-    public static boolean equalNum(int x) {
+    public boolean equalNum(int x) {
         if (x < 0) x = -x; //делаем число положительным
         if (x < 10) return true;
 
@@ -536,7 +535,7 @@ x=1211
         return true;
     }
 
-    public static void equalNum2() {
+    public void equalNum2() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите число: ");
         while (!scanner.hasNextInt()) {
@@ -554,7 +553,7 @@ x=1211
 Левый треугольник.
 Дана сигнатура метода: public void leftTriangle (int x);
 Необходимо реализовать метод таким образом, чтобы он выводил на экран
-треугольник из символов ‘*’ у которого х символов в высоту, а количество
+треугольник из символов '*' у которого х символов в высоту, а количество
 символов в ряду совпадает с номером строки.
 Пример 1:
 x=2
@@ -569,7 +568,7 @@ x=4
 ***
 ****
      */
-    public static void leftTriangle(int x) {
+    public void leftTriangle(int x) {
         for (int i = 1; i <= x; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print('*');
@@ -578,7 +577,7 @@ x=4
         }
     }
 
-    public static void leftTriangle2() {
+    public void leftTriangle2() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите высоту треугольника: ");
         while (!scanner.hasNextInt()) {
@@ -609,7 +608,7 @@ x=4
 Вы угадали!
 Вы отгадали число за 2 попытки
      */
-    public static void guessGame() {
+    public void guessGame() {
         Random rand = new Random();
         int randomInt = rand.nextInt(10);
         Scanner scanner = new Scanner(System.in);
@@ -641,12 +640,11 @@ x=4
         scanner.close();
     }
 
-    public static void guessGame2() {
+    public void guessGame2() {
         guessGame();
     }
 
-
-//Задание 4. Массивы
+    //Задание 4. Массивы
     /* Задание 2
 Поиск последнего значения.
 Дана сигнатура метода: public int findLast (int[] arr, int x);
@@ -658,7 +656,7 @@ arr=[1,2,3,4,2,2,5]
 x=2
 результат: 5
      */
-    public static int findLast(int[] arr, int x) {
+    public int findLast(int[] arr, int x) {
         for (int i = arr.length - 1; i >= 0; i--) {
             if (arr[i] == x) {
                 return i;
@@ -667,7 +665,7 @@ x=2
         return -1;
     }
 
-    public static void findLast2() {
+    public void findLast2() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите размер массива: ");
         while (!scanner.hasNextInt()) {
@@ -713,21 +711,21 @@ x=9
 pos=3
 результат: [1,2,3,9,4,5]
      */
-    public static int[] add(int[] arr, int x, int pos) {
+    public int[] add(int[] arr, int x, int pos) {
         if (pos < 0 || pos > arr.length) {
             System.out.println("Ошибка: неверная позиция!");
             return arr;
         }
 
         int[] newArr = new int[arr.length + 1];
-        System.arraycopy(arr, 0, newArr, 0, pos);
+        System.arraycopy(arr, 0, newArr, 0, pos);//от начала до pos
         newArr[pos] = x;
-        System.arraycopy(arr, pos, newArr, pos + 1, arr.length - pos);
+        System.arraycopy(arr, pos, newArr, pos + 1, arr.length - pos); //от pos до конца
 
         return newArr;
     }
 
-    public static void add2() {
+    public void add2() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите размер массива: ");
         while (!scanner.hasNextInt()) {
@@ -783,8 +781,7 @@ pos=3
 arr=[1,2,3,4,5]
 результат: arr=[5,4,3,2,1]
      */
-
-    public static void reverse(int[] arr) {
+    public void reverse(int[] arr) {
         for (int i = 0; i < arr.length / 2; i++) {
             int temp = arr[i];
             arr[i] = arr[arr.length - 1 - i];
@@ -792,7 +789,7 @@ arr=[1,2,3,4,5]
         }
     }
 
-    public static void reverse2() {
+    public void reverse2() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите размер массива: ");
         while (!scanner.hasNextInt()) {
@@ -842,14 +839,14 @@ arr1=[1,2,3]
 arr2=[7,8,9]
 результат: [1,2,3,7,8,9]
      */
-    public static int[] concat(int[] arr1, int[] arr2) {
+    public int[] concat(int[] arr1, int[] arr2) {
         int[] result = new int[arr1.length + arr2.length];
         System.arraycopy(arr1, 0, result, 0, arr1.length);
         System.arraycopy(arr2, 0, result, arr1.length, arr2.length);
         return result;
     }
 
-    public static void concat2() {
+    public void concat2() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Введите размер 1 массива: ");
@@ -908,7 +905,7 @@ arr2=[7,8,9]
 arr=[1,2,-3,4,-2,2,-5]
 результат: [1,2,4,2]
      */
-    public static int[] deleteNegative(int[] arr) {
+    public int[] deleteNegative(int[] arr) {
         int count = 0;
         for (int num : arr) {
             if (num >= 0) count++;
@@ -924,7 +921,7 @@ arr=[1,2,-3,4,-2,2,-5]
         return result;
     }
 
-    public static void deleteNegative2() {
+    public void deleteNegative2() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите размер массива: ");
         while (!scanner.hasNextInt()) {
